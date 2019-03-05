@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <meta charset="UTF-8">
+  <head>
+    <title>ゴールドバッハ予想</title>
+  </head>
+  <body>
+    <script>
+    <!--
+      for (let n = 4; ; n += 2) {
+	  let x = sum_of_two_primes(n)
+	  if (x.length > 0) {
+	      window.alert(
+		  "　∧_∧　ババババ\n（ ・ω・)=つ≡つ\n（っ ≡つ=つ\n`/　　)\n" +
+		  "(ノΠＵ\n" + n + "は" +  x[0] +  "と" + x[1] +
+		  "の和ですよ～ww\n" +
+		  "m9（＾Д＾）プギャー！！\n" +
+		      "　byゴールドバッハ")
+	  } else {
+	      window.alert(n + "は2つの素数の和で表せない！")
+	      break;
+	  }
+      }
+
+      function sum_of_two_primes(n) {
+	  let p = primes_lt(n)
+	  for (let x of p) {
+	      for (let y of p) {
+		  if (x + y == n)
+		      return [x, y]
+	      }
+	  }
+
+	  return []
+      }
+
+      function primes_lt(n) {
+	  let ret = []
+	  let it = primes()
+	  for (let x of it) {
+	      if (x >= n)
+		  return ret
+	      ret.push(x)
+	  }
+      }
+
+      function* primes() {
+	  let n = 2;
+
+	  while (true) {
+	      if (isPrime(n)) yield n;
+	      n++;
+	  }
+
+	  function isPrime(num) {
+	      for (var i = 2; i <= Math.sqrt(num); i++) {
+		  if (num % i === 0) {
+		      return false;
+		  }
+	      }
+	      return true;
+	  }
+      }
+// -->
+</script>
+  </body>
+</html>
